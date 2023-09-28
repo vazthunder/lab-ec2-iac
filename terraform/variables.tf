@@ -1,0 +1,13 @@
+variable "region"                 { type = string }
+variable "project"                { type = string }
+variable "env"                    { type = string }
+variable "cidr_vpc"               { type = string }
+variable "cidr_private_a"         { type = string }
+variable "cidr_private_b"         { type = string }
+variable "cidr_public_a"          { type = string }
+variable "cidr_public_b"          { type = string }
+variable "bastion_ami_id"         { type = string }
+variable "bastion_instance_type"  { type = string }
+variable "bastion_storage_size"   { type = string }
+variable "base_ami_id"            { type = string }
+variable "key_name"               { type = string }

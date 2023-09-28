@@ -1,0 +1,9 @@
+.terraform/
+.terraform.lock.hcl
+.aws/config
+.aws/credentials
+*.tfplan
+dev.*
+staging.*
+stg.*
+prod.*

@@ -1,0 +1,19 @@
+variable "project"             { type = string }
+variable "env"                 { type = string }
+variable "base_ami_id"         { type = string }
+variable "key_name"            { type = string }
+variable "vpc_id"              { type = string }
+variable "subnet-private-a_id" { type = string }
+variable "subnet-private-b_id" { type = string }
+variable "sg-bastion_id"       { type = string }
+variable "sg-alb_id"           { type = string }
+variable "alb-listener_arn"    { type = string }
+
+variable "app_name"            { type = string }
+variable "app_port"            { type = string }
+variable "app_path"            { type = string }
+variable "app_instance_type"   { type = string }
+variable "app_storage_size"    { type = string }
+variable "app_min_size"        { type = string }
+variable "app_max_size"        { type = string }
+variable "app_desired_size"    { type = string }
