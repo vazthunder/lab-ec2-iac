@@ -43,6 +43,15 @@ resource "aws_iam_role" "bastion" {
       Version: "2012-10-17"
       Statement: [
         {
+          Action: [
+            "s3:ListBucket",
+            "s3:GetObject",
+            "s3:PutObject"
+          ]
+          Resource: "*"
+          Effect: "Allow"
+        },
+        {
           Action: "ecr:*"
           Resource: "*"
           Effect: "Allow"
@@ -51,7 +60,8 @@ resource "aws_iam_role" "bastion" {
           Action: [
             "codedeploy:CreateDeployment",
             "codedeploy:GetDeploymentConfig",
-            "codedeploy:GetApplicationRevision"
+            "codedeploy:GetApplicationRevision",
+            "codedeploy:RegisterApplicationRevision"
           ]
           Resource: "*"
           Effect: "Allow"

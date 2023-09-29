@@ -76,7 +76,7 @@ module "app" {
   app_name          = "app"
   app_port          = 3000
   app_path          = "/"
-  app_instance_type = "t3-small"
+  app_instance_type = "t3.small"
   app_storage_size  = 10
   app_min_size      = 1
   app_max_size      = 3

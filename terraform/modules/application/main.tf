@@ -57,6 +57,15 @@ resource "aws_iam_role" "application" {
       Version: "2012-10-17"
       Statement: [
         {
+          Action: [
+            "ecr:GetAuthorizationToken",
+            "ecr:BatchGetImage",
+            "ecr:GetDownloadUrlForLayer"
+          ]
+          Resource: "*"
+          Effect: "Allow"
+        },
+        {
           Effect: "Allow"
           Action: [
             "logs:CreateLogGroup",
